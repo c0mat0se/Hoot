@@ -72,14 +72,17 @@
     0% {opacity: 1; transform: translateX(0);}
     100% {opacity: 0; transform: translateX(3px);}
 }
+
 @keyframes hoot-fade-out-right {
     0% {opacity: 1; transform: translateX(0);}
     100% {opacity: 0; transform: translateX(-3px);}
 }
+
 @keyframes hoot-fade-out-top {
     0% {opacity: 1; transform: translateY(0);}
     100% {opacity: 0; transform: translateY(3px);}
 }
+
 @keyframes hoot-fade-out-bottom {
     0% {opacity: 1; transform: translateY(0);}
     100% {opacity: 0; transform: translateY(-3px);}

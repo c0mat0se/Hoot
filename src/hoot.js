@@ -75,11 +75,15 @@ function Hoot() {
 
     // Tooltip Removal Function
     function tooltipsDestroy() {
-        let elemDestroy = document.querySelectorAll('#hoot-tg');
+        let tooltipDestroy = document.querySelectorAll('#hoot-tg');
 
         // Remove tooltips from document
-        elemDestroy.forEach(function(item) {
-            item.parentNode.removeChild(item);
+        tooltipDestroy.forEach(function(tooltip) {
+            tooltip.classList.add('fade-out');
+
+            tooltip.addEventListener('animationend', function () {
+                tooltip.parentNode.removeChild(tooltip);
+            });
         });
     }
 
