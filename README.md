@@ -1,4 +1,4 @@
-# Hoot
+# Hoot v0.1
 Simple javascript tooltips. No dependencies. Works for all major browser versions excluding IE.
 
 
