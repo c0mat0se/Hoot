@@ -9,7 +9,7 @@ function Hoot(offset) {
 
     elems.forEach(function(item) {
         item.addEventListener('mouseover', tooltipsCreate);
-        item.addEventListener('mouseout', tooltipsDestroy);
+        item.addEventListener('mouseout', tooltipsDissolve);
     });
 
     // Tooltip Creation Function
@@ -78,13 +78,19 @@ function Hoot(offset) {
     }
 
     // Tooltip Removal Function
-    function tooltipsDestroy() {
-        let tooltipDestroy = document.querySelectorAll('.hoot-tooltip');
+    function tooltipsDissolve() {
+        let tooltipDissolve = document.querySelectorAll('.hoot-tooltip');
 
         // hide tooltip
-        for (var i = 0; i < tooltipDestroy.length; i++) {
-            tooltipDestroy[i].classList.add('fade-out');
+        for (var i = 0; i < tooltipDissolve.length; i++) {
+            tooltipDissolve[i].classList.add('fade-out');
         }
+
+        setTimeout(tooltipsDestroy, 150);
+
+    }
+
+    function tooltipsDestroy() {
 
     }
 
