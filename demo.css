@@ -1,7 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: #f1f2f3;
     font-family: 'Roboto';
     font-weight: 300;
+    font-size: 16px;
 }
 
 body * {
@@ -20,4 +25,33 @@ body * {
 
 h1, h2 {
     text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    padding: 30px;
+}
+
+p {
+    text-align: center;
+    margin: 0 0 2em;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.buttons a {
+    display: inline-block;
+    padding: 16px 28px;
+    color: #fff;
+    background: #0366d6;
+    border-radius: 0.25em;
+    text-decoration: none;
+    transition: 150ms ease;
+}
+
+.buttons a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
 }
