@@ -50,8 +50,10 @@ function Hoot(offset) {
         let ttOffset = 8;
 
         // Set offset if defined in init configs
-        if (typeof offset.offset != '' && typeof offset.offset != 'undefined') {
-            ttOffset = parseInt(offset.offset);
+        if(typeof offset != 'undefined'){
+            if (typeof offset.offset != '' && typeof offset.offset != 'undefined') {
+                ttOffset = parseInt(offset.offset);
+            }
         }
 
         // Set positions based on tooltip position (ttPos)

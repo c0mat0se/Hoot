@@ -13,32 +13,33 @@
             <a href="https://github.com/c0mat0se/Hoot" class="button">GitHub</a>
         </div>
 
-        <h2>Label</h2>
+        <h2>Divs</h2>
         <div class="demo">
-            <div class="hoot" data-tooltip-position="bottom" data-tooltip="This is a bottom tooltip">Bottom Tooltip</div>
-            <div class="hoot" data-tooltip-position="top" data-tooltip="This is a top tooltip">Top Tooltip</div>
-            <div class="hoot" data-tooltip-position="left" data-tooltip="This is a left tooltip">Left Tooltip</div>
-            <div class="hoot" data-tooltip-position="right" data-tooltip="This is a right tooltip">Right Tooltip</div>
+            <div class="hoot" data-tooltip-position="bottom" data-tooltip="This is a bottom tooltip">Hover Me</div>
+            <div class="hoot" data-tooltip-position="top" data-tooltip="This is a top tooltip">Hover Me</div>
+            <div class="hoot" data-tooltip-position="left" data-tooltip="This is a left tooltip">Hover Me</div>
+            <div class="hoot" data-tooltip-position="right" data-tooltip="This is a right tooltip">Hover Me</div>
         </div>
 
-        <h2>Label</h2>
+        <h2>Links</h2>
         <div class="demo">
-            <button class="hoot" data-tooltip-position="bottom" data-tooltip="This is a bottom tooltip">Bottom Tooltip</button>
-            <button class="hoot" data-tooltip-position="top" data-tooltip="This is a top tooltip">Top Tooltip</button>
-            <button class="hoot" data-tooltip-position="left" data-tooltip="This is a left tooltip">Left Tooltip</button>
-            <button class="hoot" data-tooltip-position="right" data-tooltip="This is a right tooltip">Right Tooltip</button>
-        </div>
-
-        <h2>Label</h2>
-        <div class="demo">
-            <a href="#" class="hoot" data-tooltip-position="bottom" data-tooltip="This is a bottom tooltip">Bottom Tooltip</a>
+            <a href="#" class="hoot" data-tooltip-position="bottom" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sequi quam voluptates nostrum, odio, excepturi accusantium assumenda nam impedit quis rerum. Ratione ipsam modi, voluptatum praesentium vero sit sint, mollitia.">Bottom Tooltip</a>
             <a href="#" class="hoot" data-tooltip-position="top" data-tooltip="This is a top tooltip">Top Tooltip</a>
             <a href="#" class="hoot" data-tooltip-position="left" data-tooltip="This is a left tooltip">Left Tooltip</a>
             <a href="#" class="hoot" data-tooltip-position="right" data-tooltip="This is a right tooltip">Right Tooltip</a>
         </div>
 
+        <div class="demo">
+            <div class="hoot" data-tooltip-position="bottom" data-tooltip="This is a bottom tooltip" data-tooltip-icon="fal fa-exclamation" data-tooltip-icon-position="left">Hover Me</div>
+            <div class="hoot" data-tooltip-position="top" data-tooltip="This is a top tooltip">Hover Me</div>
+            <div class="hoot" data-tooltip-position="left" data-tooltip="This is a left tooltip">Hover Me</div>
+            <div class="hoot" data-tooltip-position="right" data-tooltip="This is a right tooltip">Hover Me</div>
+        </div>
+
         <script>
-            document.addEventListener('DOMContentLoaded', Hoot);
+            document.addEventListener('DOMContentLoaded', Hoot({
+                offset: '15'
+            }));
         </script>
 
         <script>
@@ -52,8 +53,6 @@
             });
 
         });
-
-
         </script>
     </body>
 </html>

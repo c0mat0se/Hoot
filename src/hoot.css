@@ -7,6 +7,7 @@
 
 .hoot-tooltip {
     position: fixed;
+    max-width: 250px;
     padding: 8px 12px;
     color: #fff;
     background-image: rgba(49, 49, 47, .99);
