@@ -15,7 +15,7 @@ Initialize the script at the bottom of your page before the closing `</body>` ta
 document.addEventListener('DOMContentLoaded', Hoot);
 ```
 
-# Hoot Configs
+# Configs
 You will be able to pass configs soon. This is in development and not yet available.
 ```javascript
 document.addEventListener('DOMContentLoaded', Hoot({
