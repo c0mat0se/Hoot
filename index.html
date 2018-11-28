@@ -24,36 +24,16 @@
             <div class="hoot" data-tooltip-position="right" data-tooltip="This is a right tooltip">Hover Me</div>
         </div>
 
-        <h2>Links</h2>
+        <h2>Tooltip Length</h2>
         <div class="demo">
-            <a href="#" class="hoot" data-tooltip-position="right" data-tooltip="This is an example of a longer tooltip.">Hover Me</a>
-            <a href="#" class="hoot" data-tooltip-position="right" data-tooltip="This is an example of an even longer tooltip... Lorem ipsum dolor sit amet, consectetur adipisicing elit.">Hover Me</a>
-            <a href="#" class="hoot" data-tooltip-position="right" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis sunt dicta animi voluptates rerum vel perferendis, perspiciatis ut temporibus quod doloremque beatae earum reprehenderit suscipit mollitia? Officiis, voluptates quas.">Hover Me</a>
-            <a href="#" class="hoot" data-tooltip-position="right" data-tooltip="This is a right tooltip">Right Tooltip</a>
-        </div>
-
-        <div class="demo">
-            <div class="hoot" data-tooltip-position="bottom" data-tooltip="This is a bottom tooltip" data-tooltip-icon="fal fa-exclamation" data-tooltip-icon-position="left">Hover Me</div>
-            <div class="hoot" data-tooltip-position="top" data-tooltip="This is a top tooltip">Hover Me</div>
-            <div class="hoot" data-tooltip-position="left" data-tooltip="This is a left tooltip">Hover Me</div>
-            <div class="hoot" data-tooltip-position="right" data-tooltip="This is a right tooltip">Hover Me</div>
+            <div class="hoot" data-tooltip-position="right" data-tooltip="This is an example of a longer tooltip.">Long</div>
+            <div class="hoot" data-tooltip-position="right" data-tooltip="This is an example of an even longer tooltip... Lorem ipsum dolor sit amet, consectetur adipisicing elit.">Longer</div>
+            <div class="hoot" data-tooltip-position="right" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis sunt dicta animi voluptates rerum vel perferendis, perspiciatis ut temporibus quod doloremque beatae earum reprehenderit suscipit mollitia? Officiis, voluptates quas.">Longer-er</div>
         </div>
 
         <script>
             document.addEventListener('DOMContentLoaded', Hoot);
         </script>
 
-        <script>
-        // Prevent Links from triggering in the demo
-        document.addEventListener('DOMContentLoaded', function() {
-            let negativeLinks = document.querySelectorAll('a.hoot');
-            negativeLinks.forEach(function(link) {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                })
-            });
-
-        });
-        </script>
     </body>
 </html>
