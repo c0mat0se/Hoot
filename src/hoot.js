@@ -31,6 +31,46 @@ function Hoot() {
 
         // Append tooltip to document
         document.body.appendChild(tooltip);
+
+        // Get offsets and sizing for hoot element
+        let hootOffsetTop = this.getBoundingClientRect().top,
+            hootOffsetLeft = this.getBoundingClientRect().left,
+            hootHeight = this.offsetHeight,
+            hootWidth = this.offsetWidth;
+
+        // Get sizing for tooltip element
+        let tooltipHeight = tooltip.offsetHeight,
+            tooltipWidth = tooltip.offsetWidth;
+
+        // Define sizing variables for later use
+        let y = '',
+            x = '',
+            spacing = 15;
+
+        // Set positions based on tooltip position (ttPos)
+        if (ttPos) {
+            if (ttPos == 'bottom') {
+                y = (hootOffsetTop + hootHeight) + spacing;
+                x = (hootOffsetLeft + (hootWidth / 2)) - (tooltipWidth / 2);
+            }
+            if (ttPos == 'top') {
+                y = (hootOffsetTop - tooltipHeight) - spacing;
+                x = (hootOffsetLeft + (hootWidth / 2)) - (tooltipWidth / 2);
+            }
+            if (ttPos == 'left') {
+                y = (hootOffsetTop + (hootHeight / 2)) - (tooltipHeight / 2);
+                x = (hootOffsetLeft - tooltipWidth) - spacing;
+            }
+            if (ttPos == 'right') {
+                y = (hootOffsetTop + (hootHeight / 2)) - (tooltipHeight / 2);
+                x = (hootOffsetLeft + hootWidth) + spacing;
+            }
+        }
+
+        // Set position of tooltip
+        tooltip.style.top = Math.round(y)+'px';
+        tooltip.style.left = Math.round(x)+'px';
+
     }
 
     // Tooltip Removal Function
