@@ -3,7 +3,7 @@
  * Version 0.1.0
  */
 
-function Hoot() {
+function Hoot(offset) {
 
     let elems = document.querySelectorAll('.hoot');
 
@@ -47,26 +47,33 @@ function Hoot() {
             x = '';
 
         // Define & merge setting for offset spacing of tooltips
-        let ttSpacing = 8;
+        let ttOffset = 8;
+
+        // Set offset if defined in init configs
+        if (typeof offset.offset != '' && typeof offset.offset != 'undefined') {
+            ttOffset = parseInt(offset.offset);
+        }
 
         // Set positions based on tooltip position (ttPos)
-        if (ttPos) {
-            if (ttPos == 'bottom') {
-                y = (hootOffsetTop + hootHeight) + ttSpacing;
-                x = (hootOffsetLeft + (hootWidth / 2)) - (tooltipWidth / 2);
-            }
-            if (ttPos == 'top') {
-                y = (hootOffsetTop - tooltipHeight) - ttSpacing;
-                x = (hootOffsetLeft + (hootWidth / 2)) - (tooltipWidth / 2);
-            }
-            if (ttPos == 'left') {
-                y = (hootOffsetTop + (hootHeight / 2)) - (tooltipHeight / 2);
-                x = (hootOffsetLeft - tooltipWidth) - ttSpacing;
-            }
-            if (ttPos == 'right') {
-                y = (hootOffsetTop + (hootHeight / 2)) - (tooltipHeight / 2);
-                x = (hootOffsetLeft + hootWidth) + ttSpacing;
-            }
+        if (!ttPos) {
+            ttPos = 'top';
+        }
+
+        if (ttPos == 'bottom') {
+            y = (hootOffsetTop + hootHeight) + ttOffset;
+            x = (hootOffsetLeft + (hootWidth / 2)) - (tooltipWidth / 2);
+        }
+        if (ttPos == 'top') {
+            y = (hootOffsetTop - tooltipHeight) - ttOffset;
+            x = (hootOffsetLeft + (hootWidth / 2)) - (tooltipWidth / 2);
+        }
+        if (ttPos == 'left') {
+            y = (hootOffsetTop + (hootHeight / 2)) - (tooltipHeight / 2);
+            x = (hootOffsetLeft - tooltipWidth) - ttOffset;
+        }
+        if (ttPos == 'right') {
+            y = (hootOffsetTop + (hootHeight / 2)) - (tooltipHeight / 2);
+            x = (hootOffsetLeft + hootWidth) + ttOffset;
         }
 
         // Set position of tooltip
