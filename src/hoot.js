@@ -44,26 +44,28 @@ function Hoot() {
 
         // Define sizing variables for later use
         let y = '',
-            x = '',
-            spacing = 15;
+            x = '';
+
+        // Define & merge setting for offset spacing of tooltips
+        let ttSpacing = 8;
 
         // Set positions based on tooltip position (ttPos)
         if (ttPos) {
             if (ttPos == 'bottom') {
-                y = (hootOffsetTop + hootHeight) + spacing;
+                y = (hootOffsetTop + hootHeight) + ttSpacing;
                 x = (hootOffsetLeft + (hootWidth / 2)) - (tooltipWidth / 2);
             }
             if (ttPos == 'top') {
-                y = (hootOffsetTop - tooltipHeight) - spacing;
+                y = (hootOffsetTop - tooltipHeight) - ttSpacing;
                 x = (hootOffsetLeft + (hootWidth / 2)) - (tooltipWidth / 2);
             }
             if (ttPos == 'left') {
                 y = (hootOffsetTop + (hootHeight / 2)) - (tooltipHeight / 2);
-                x = (hootOffsetLeft - tooltipWidth) - spacing;
+                x = (hootOffsetLeft - tooltipWidth) - ttSpacing;
             }
             if (ttPos == 'right') {
                 y = (hootOffsetTop + (hootHeight / 2)) - (tooltipHeight / 2);
-                x = (hootOffsetLeft + hootWidth) + spacing;
+                x = (hootOffsetLeft + hootWidth) + ttSpacing;
             }
         }
 
@@ -79,8 +81,11 @@ function Hoot() {
 
         // Remove tooltips from document
         tooltipDestroy.forEach(function(tooltip) {
+
+            // Add class to tooltips for fade-out effect
             tooltip.classList.add('fade-out');
 
+            // Remove tooltips based on animationend (from fade-out effect)
             tooltip.addEventListener('animationend', function () {
                 tooltip.parentNode.removeChild(tooltip);
             });

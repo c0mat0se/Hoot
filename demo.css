@@ -1,13 +1,23 @@
 body {
     background: #f1f2f3;
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+
+body * {
+    font-weight: inherit;
 }
 
 .demo {
     max-width: 800px;
-    margin: 10vh auto;
+    margin: 0 auto 50px;
     padding: 50px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background: #fff;
+}
+
+h1, h2 {
+    text-align: center;
 }

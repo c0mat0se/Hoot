@@ -1,11 +1,19 @@
 <html>
     <head>
         <title>Hoot Demo</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700" rel="stylesheet">
         <link rel="stylesheet" href="demo.css">
         <link rel="stylesheet" href="src/hoot.css">
         <script src="src/hoot.js"></script>
     </head>
     <body>
+        <h1>Hoot Demo</h1>
+
+        <div class="buttons">
+            <a href="https://github.com/c0mat0se/Hoot" class="button">GitHub</a>
+        </div>
+
+        <h2>Label</h2>
         <div class="demo">
             <div class="hoot" data-tooltip-position="bottom" data-tooltip="This is a bottom tooltip">Bottom Tooltip</div>
             <div class="hoot" data-tooltip-position="top" data-tooltip="This is a top tooltip">Top Tooltip</div>
@@ -13,8 +21,39 @@
             <div class="hoot" data-tooltip-position="right" data-tooltip="This is a right tooltip">Right Tooltip</div>
         </div>
 
+        <h2>Label</h2>
+        <div class="demo">
+            <button class="hoot" data-tooltip-position="bottom" data-tooltip="This is a bottom tooltip">Bottom Tooltip</button>
+            <button class="hoot" data-tooltip-position="top" data-tooltip="This is a top tooltip">Top Tooltip</button>
+            <button class="hoot" data-tooltip-position="left" data-tooltip="This is a left tooltip">Left Tooltip</button>
+            <button class="hoot" data-tooltip-position="right" data-tooltip="This is a right tooltip">Right Tooltip</button>
+        </div>
+
+        <h2>Label</h2>
+        <div class="demo">
+            <a href="#" class="hoot" data-tooltip-position="bottom" data-tooltip="This is a bottom tooltip">Bottom Tooltip</a>
+            <a href="#" class="hoot" data-tooltip-position="top" data-tooltip="This is a top tooltip">Top Tooltip</a>
+            <a href="#" class="hoot" data-tooltip-position="left" data-tooltip="This is a left tooltip">Left Tooltip</a>
+            <a href="#" class="hoot" data-tooltip-position="right" data-tooltip="This is a right tooltip">Right Tooltip</a>
+        </div>
+
         <script>
             document.addEventListener('DOMContentLoaded', Hoot);
+        </script>
+
+        <script>
+        // Prevent Links from triggering in the demo
+        document.addEventListener('DOMContentLoaded', function() {
+            let negativeLinks = document.querySelectorAll('a.hoot');
+            negativeLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                })
+            });
+
+        });
+
+
         </script>
     </body>
 </html>
