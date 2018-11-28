@@ -49,13 +49,6 @@ function Hoot(offset) {
         // Define & merge setting for offset spacing of tooltips
         let ttOffset = 8;
 
-        // Set offset if defined in init configs
-        if(typeof offset != 'undefined'){
-            if (typeof offset.offset != '' && typeof offset.offset != 'undefined') {
-                ttOffset = parseInt(offset.offset);
-            }
-        }
-
         // Set positions based on tooltip position (ttPos)
         if (!ttPos) {
             ttPos = 'top';
@@ -86,19 +79,13 @@ function Hoot(offset) {
 
     // Tooltip Removal Function
     function tooltipsDestroy() {
-        let tooltipDestroy = document.querySelectorAll('#hoot-tg');
+        let tooltipDestroy = document.querySelectorAll('.hoot-tooltip');
 
-        // Remove tooltips from document
-        tooltipDestroy.forEach(function(tooltip) {
+        // hide tooltip
+        for (var i = 0; i < tooltipDestroy.length; i++) {
+            tooltipDestroy[i].classList.add('fade-out');
+        }
 
-            // Add class to tooltips for fade-out effect
-            tooltip.classList.add('fade-out');
-
-            // Remove tooltips based on animationend (from fade-out effect)
-            tooltip.addEventListener('animationend', function () {
-                tooltip.parentNode.removeChild(tooltip);
-            });
-        });
     }
 
 }
