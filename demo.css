@@ -1,0 +1,13 @@
+body {
+    background: #f1f2f3;
+}
+
+.demo {
+    max-width: 800px;
+    margin: 10vh auto;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #fff;
+}
