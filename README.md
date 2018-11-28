@@ -1,6 +1,7 @@
 # Hoot
 Simple javascript tooltips. No dependencies. Works for all major browser versions excluding IE.
 
+
 ## Include the script and stylesheet
 Include both the `hoot.js` and `hoot.css` files found in the src directory in the head of your document.
 
@@ -9,11 +10,13 @@ Include both the `hoot.js` and `hoot.css` files found in the src directory in th
 <script src="src/hoot.js"></script>
 ```
 
-## Initializing Hoot
+
+## Initializing
 Initialize the script at the bottom of your page before the closing `</body>` tag.
 ```javascript
 document.addEventListener('DOMContentLoaded', Hoot);
 ```
+
 
 ## Configs
 You will be able to pass configs soon. This is in development and not yet available.
@@ -25,11 +28,13 @@ document.addEventListener('DOMContentLoaded', Hoot({
 }));
 ```
 
+
 ## Define your tooltip's content
 On your element, include the following attributes. Your element must also have the `hoot` class.
 ```html
 <div class="hoot" data-tooltip="This is a tooltip" data-tooltip-position="bottom">Hover Me</div>
 ```
+
 
 ## Variables
 
